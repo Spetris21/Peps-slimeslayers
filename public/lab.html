@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slime Slayers · Character Lab</title>
+<style>
+@font-face{font-family:'Outfit';src:url(fonts/Outfit-Bold.woff) format('woff');font-weight:600 950}
+@font-face{font-family:'Outfit';src:url(fonts/Outfit-Regular.woff) format('woff');font-weight:300 500}
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#07060a;font-family:'Outfit','Segoe UI',sans-serif;color:#e8e2ee}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;cursor:grab}
+#panel{position:fixed;top:12px;right:12px;bottom:12px;width:300px;overflow:auto;padding:14px;border-radius:10px;background:rgba(13,11,17,.94);border:1px solid #3a3026;box-shadow:0 20px 60px #000c,inset 0 0 0 1px #ffffff08}
+#panel h1{margin:0 0 2px;font-size:18px;font-weight:900;color:#d8b46a;letter-spacing:4px;text-transform:uppercase}
+#panel .sub{font-size:12px;color:#948ca2;margin-bottom:8px}
+.sec{margin:12px 0 6px;font-size:10px;font-weight:900;letter-spacing:2px;color:#d8b46a;text-transform:uppercase}
+.bs{display:flex;flex-wrap:wrap;gap:5px}
+button{font-family:inherit;font-weight:800;font-size:12px;color:#f2dca0;border:1px solid #4a3c2a;border-radius:6px;padding:6px 9px;cursor:pointer;letter-spacing:.3px;background:linear-gradient(#2c2832,#18151d);box-shadow:inset 0 1px 0 #ffffff14,0 2px 0 #000a}
+button:hover{filter:brightness(1.25)}button.on{background:linear-gradient(#5a1a22,#2a0a10);border-color:#c0283a;color:#fff}
+button:active{transform:translateY(1px)}
+#cap{position:fixed;left:16px;bottom:14px;font-weight:800;font-size:13px;color:#948ca2;letter-spacing:.5px;text-shadow:0 2px 4px #000}
+@media (max-width:700px){#panel{top:auto;left:8px;right:8px;width:auto;height:42vh}}
+</style></head><body>
+<canvas id="c"></canvas>
+<div id="panel"></div>
+<div id="cap">Drag to spin the camera · scroll to zoom</div>
+<script src="config.js"></script>
+<script src="engine.js"></script>
+<script src="char.js"></script>
+<script src="lab.js"></script>
+</body></html>
